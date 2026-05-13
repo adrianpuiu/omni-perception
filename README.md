@@ -1,6 +1,6 @@
 # Omni Perception
 
-Multimodal AI perception powered by [NVIDIA Nemotron 3 Nano Omni](https://build.nvidia.com/nvidia/nemotron-3-nano-omni-30b-a3b) — a single model that sees, hears, reads, and understands images, audio, video, and PDFs.
+Multimodal AI perception powered by [NVIDIA Nemotron 3 Nano Omni]([https://build.nvidia.com/nvidia/nemotron-3-nano-omni-30b-a3b](https://build.nvidia.com/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning)) — a single model that sees, hears, reads, and understands images, audio, video, and PDFs.
 
 Two packages, one model:
 
