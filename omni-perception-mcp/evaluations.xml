@@ -1,0 +1,42 @@
+<evaluation>
+  <qa_pair>
+    <question>Use the omni_health tool to check if the perception server is running. What is the model name returned in the response? Provide just the model name string.</question>
+    <answer>nemotron_3_nano_omni</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Call the omni_health tool and examine the response. What is the base_url field value? Provide the exact URL string.</question>
+    <answer>http://localhost:8000/v1</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>List all available tools using the tools/list method. How many tools are registered in total? Provide the number.</question>
+    <answer>7</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Using tools/list, find the tool that handles PDF analysis. What is its exact tool name?</question>
+    <answer>analyze_document</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Using tools/list, find the tool dedicated to pure speech-to-text conversion without any reasoning or analysis. What is its exact tool name?</question>
+    <answer>transcribe_audio</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Try calling analyze_image with an invalid file path "/etc/nonexistent_image.xyz" and the prompt "describe this". What error type is returned in the response text? Provide just the error type word that appears after "Error".</question>
+    <answer>MediaValidationError</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Try calling analyze_image with the path "/etc/passwd" and prompt "describe this". This file exists but is outside the allowed media path. What error type is indicated in the response? Provide just the error type word after "Error".</question>
+    <answer>PathSecurityError</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Call analyze_multimodal with only a prompt and no image_path, audio_path, or video_path. The tool should reject this. What word appears in the error message after "Error"? Provide just the first error type word.</question>
+    <answer>VALIDATION</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Using tools/list, examine the analyze_video tool's input schema. What is the default value for the "with_audio" parameter according to the tool description? Answer true or false.</question>
+    <answer>true</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Using tools/list, examine the analyze_document tool. What are the valid values for the "pages" parameter according to its input schema? Provide the three allowed types separated by commas, in the order they appear.</question>
+    <answer>literal, number, array</answer>
+  </qa_pair>
+</evaluation>
